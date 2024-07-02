@@ -1,0 +1,107 @@
+/*
+ * Globals
+ */
+
+/* Custom default button */
+.btn-light { /* Target the default button class */
+  background-color: #007bff;  /* Blue background color */
+  color: #fff;                /* White text color */
+  text-shadow: none;          /* Prevent inheritance from `body` */
+}
+
+.btn-secondary {
+  background-color: #007bff; /* Warna biru */
+  color: #fff; /* Warna teks putih */
+}
+
+/*
+ * Base structure
+ */
+
+body, * {
+  color: white;
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, .5);
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-box {
+  background-color: #1c1e21;
+  padding: 20px;
+  margin: 10px;
+  width: 100%; /* Lebar penuh */
+  max-width: 600px; /* Lebar maksimum */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px; /* Sudut yang lebih halus */
+  opacity: 0; /* Mulai dengan opacity 0 */
+  transform: translateY(20px); /* Mulai dengan sedikit pergeseran ke bawah */
+  animation: fadeInUp 1s forwards; /* Animasi masuk */
+  animation-delay: calc(var(--order) * 0.3s); /* Penundaan animasi berdasarkan urutan */
+}
+
+.service-box h2 {
+  color: #007bff;
+}
+
+.service-box p {
+  color: white;
+}
+
+.service-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px; /* Sudut yang lebih halus untuk gambar */
+}
+
+/* Animasi masuk */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styling for version information */
+.version-info {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.version-rest-api {
+  color: red;
+}
+
+.version-apache {
+  color: green;
+}
